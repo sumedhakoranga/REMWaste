@@ -42,18 +42,16 @@ const SkipSelection = () => {
       </p>
       <div className={`skip-grid ${isMobile ? "mobile" : ""}`}>
         {skips.map((skip) => (
-          <div
-            key={skip.id}
-            className="skip-card"
-            onClick={() => setSelectedSkip(skip)}
-          >
-            <img
-              src={`${skipImageBaseUrl}${skip.size}-yarder-skip.jpg`}
-              alt={`${skip.size} Yard Skip`}
-            />
-            <h2>{skip.size} Yard Skip</h2>
-            <p>£{skip.price_before_vat + skip.vat}</p>
-            <button>Pick Skip</button>
+          <div key={skip.id} className="card-wrapper">
+            <div className="skip-card" onClick={() => setSelectedSkip(skip)}>
+              <img
+                src={`${skipImageBaseUrl}${skip.size}-yarder-skip.jpg`}
+                alt={`${skip.size} Yard Skip`}
+              />
+              <h2>{skip.size} Yard Skip</h2>
+              <p>£{skip.price_before_vat + skip.vat}</p>
+              <button>Pick Skip</button>
+            </div>
           </div>
         ))}
       </div>

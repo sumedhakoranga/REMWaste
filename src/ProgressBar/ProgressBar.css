@@ -14,7 +14,7 @@
 .progress-steps__container::before {
   content: '';
   position: absolute;
-  background: #f3e7f3;
+  background: #d7d3d7;
   height: 4px;
   width: 100%;
   top: 50%;
@@ -37,20 +37,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
-  background-color: #f3e7f3;
+  width: 12px;
+  height: 12px;
+  background-color: #dfbcbc;
   border-radius: 50%;
   z-index: 2;
 }
 
 .progress-steps__dot.completed {
-  background-color: #00c853;
+  background-color: #037231;
 }
 
 .progress-steps__icon-only {
   font-size: 13px;
-  color: white;
+  color: #4B3621;
   z-index: 3;
 }
 
@@ -61,7 +61,7 @@
 
 .progress-steps__label {
   font-size: 10px;
-  color: #ffffff;
+  color: #4B3621;
   white-space: nowrap;
 }
 
@@ -75,7 +75,7 @@
   }
 
   .progress-steps__dot {
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
   }
 }

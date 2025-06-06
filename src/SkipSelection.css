@@ -1,24 +1,22 @@
 .skip-selection {
   padding: 20px;
-  /* background: linear-gradient(90deg,rgba(12, 12, 26, 1) 0%, rgba(54, 54, 61, 1) 35%, rgba(54, 54, 54, 1) 100%); */
-  background: linear-gradient(
-    90deg,
-    rgba(12, 12, 26, 1) 0%,
-    rgba(17, 17, 23, 1) 35%,
-    rgba(20, 16, 26, 1) 100%
-  );
+  background: #f9f6ee;
 }
 
 .skip-selection h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #fff;
+  color: #4B3621;
 }
 
 .skip-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+}
+
+.card-wrapper {
+  perspective: 1000px;
 }
 
 .skip-card {
@@ -30,16 +28,14 @@
   text-align: center;
   padding: 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .skip-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.skip-card:active {
-  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateZ(20px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .skip-card img {
@@ -52,12 +48,12 @@
 .skip-card h2 {
   font-size: 1.5em;
   margin: 10px 0;
-  color: #807404;
+  color: #6f4e37;
 }
 
 .skip-card p {
   margin: 5px 0;
-  color: #ffffff;
+  color: #4B3621;
 }
 
 .skip-card button {
@@ -77,8 +73,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,7 +207,7 @@ a {
 .subheading {
   text-align: center;
   font-size: 1em;
-  color: #ffffff;
+  color: #4B3621;
   margin-bottom: 20px;
 }
 
