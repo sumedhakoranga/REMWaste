@@ -1,0 +1,285 @@
+.skip-selection {
+  padding: 20px;
+  /* background: linear-gradient(90deg,rgba(12, 12, 26, 1) 0%, rgba(54, 54, 61, 1) 35%, rgba(54, 54, 54, 1) 100%); */
+  background: linear-gradient(
+    90deg,
+    rgba(12, 12, 26, 1) 0%,
+    rgba(17, 17, 23, 1) 35%,
+    rgba(20, 16, 26, 1) 100%
+  );
+}
+
+.skip-selection h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.skip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skip-card {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skip-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.skip-card:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.skip-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #fff;
+}
+
+.skip-card h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #807404;
+}
+
+.skip-card p {
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+.skip-card button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.skip-card,
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+.modal-content {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border-color);
+  color: #000;
+}
+
+.modal-content img {
+  max-width: 250px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.modal-content .text-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 10px;
+}
+
+.modal-content .text-content h2 {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+.modal-content .text-content p {
+  font-size: 1.2em;
+  margin: 0;
+  color: #ffffff;
+}
+
+.modal-content .text-content .small-text {
+  font-size: 0.7em;
+  color: #ffffff;
+}
+
+.modal-content .action-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-content .action-buttons button {
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  cursor: pointer;
+  color: #333;
+  transform: translate(0, -10px);
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 0.8em;
+  background-color: transparent;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.progress-step .icon {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.progress-step .text {
+  font-size: 0.9em;
+  color: #333;
+}
+
+.progress-bar::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ddd;
+  margin: 0 10px;
+}
+
+.progress-step:not(:last-child)::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ddd;
+  margin: 0 10px;
+}
+
+.subheading {
+  text-align: center;
+  font-size: 1em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    align-items: flex-start;
+    padding-top: 250px;
+  }
+
+  .skip-selection h1 {
+    font-size: 1.2em;
+  }
+
+  .skip-selection .subheading {
+    font-size: 0.9em;
+  }
+
+  .skip-card h2 {
+    font-size: 1em;
+  }
+
+  .skip-card p {
+    font-size: 0.8em;
+  }
+
+  .skip-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    background-color: #fff;
+  }
+
+  .skip-card button {
+    font-size: 0.5em;
+    padding: 5px 10px;
+  }
+
+  .modal-content {
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  .modal-content .text-content h2 {
+    font-size: 1.2em;
+  }
+
+  .modal-content .text-content p {
+    font-size: 0.9em;
+  }
+
+  .modal-content .action-buttons button {
+    font-size: 0.8em;
+    padding: 8px 15px;
+  }
+
+  .modal-content img {
+    max-width: 100px;
+    height: auto;
+    margin-left: 5px;
+  }
+
+  .skip-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .skip-card {
+    padding: 8px;
+    transform: scale(0.92);
+  }
+}
